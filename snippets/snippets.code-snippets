@@ -1,1 +1,26 @@
-{}
+{
+    "Tropity Bot Starter": {
+        "prefix": "t!botstart",
+        "body": [
+            "const TropityBot = require('TropityBot')",
+            " ",
+            "TropityBot.init()",
+            " ",
+            "var botHandler = TropityBot.login(",
+            "   '<client id here>',",
+            "   '<api key here>'",
+            ");",
+            " ",
+            "var client = botHandler.client;",
+            " ",
+            "const prefix = '!';",
+            " ",
+            "client.on('message', (message) => {",
+            "   if (message.content.startsWith(`${prefix}hello`)) {",
+            "       client.sendMessage(`Hello, ${message.author.ucid}!`)",
+            "   }",
+            "});"
+        ],
+        "description": "Creates a simple bot with the Tropity Bot API with 1 command"
+    }
+}
